@@ -8,7 +8,7 @@ namespace XamarinFormsDemo
 		{
 			InitializeComponent();
 
-			MainPage = new XamarinFormsDemoPage();
+			MainPage = new Login();
 		}
 
 		protected override void OnStart()
