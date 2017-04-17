@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamarinFormsDemo.Login">
-
-	<ContentPage.Resources>
-		<ResourceDictionary>
-			
-		</ResourceDictionary>
-				
-	</ContentPage.Resources>
-		
+	
 	<ContentPage.Content>
 		<ScrollView BackgroundColor="#3498DB">
 
@@ -27,27 +20,29 @@
 				</Label>
 
 				<Entry
+					x:Name="entryEmail"
 					Placeholder="Enter Email Id"
 					HorizontalOptions="FillAndExpand"
-					Margin="0, 0, 0, 15"
-					HeightRequest="35">										
+					Margin="0, 0, 0, 15">										
 				</Entry>
 
-				<Entry
+				<Entry					
+					x:Name="entryPassword"
 					Placeholder="Enter Password"
 					Margin="0, 0, 0, 20"
-					HeightRequest="35">					
+					>					
 				</Entry>
 
-				<Button
+				<Button					
+					x:Name="btnLogin"
 					Text="Login"
 					TextColor="White"
 					BorderColor="White"
 					BorderRadius="5"
 					BorderWidth="1"
-					HeightRequest="30"
 					WidthRequest="120"
-					HorizontalOptions="CenterAndExpand">					
+					HorizontalOptions="CenterAndExpand"
+					Command="{Binding LoginCommand}">					
 				</Button>
 
 				<Label
@@ -66,11 +61,13 @@
 						Source="facebook"
 						Margin="0, 0, 10, 0"
 						Aspect="AspectFit"
+						x:Name="imgFacebook"
 						>
 					</Image>
-					<Image						
+					<Image										
 						Source="google"
 						Aspect="AspectFit"
+						x:Name="imgGoogle"
 						>
 					</Image>
 				</StackLayout>

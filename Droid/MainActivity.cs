@@ -7,6 +7,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android.Database.Sqlite;
 
 namespace XamarinFormsDemo.Droid
 {
@@ -16,6 +17,8 @@ namespace XamarinFormsDemo.Droid
 		protected override void OnCreate(Bundle bundle)
 		{
 			TabLayoutResource = Resource.Layout.Tabbar;
+
+
 			ToolbarResource = Resource.Layout.Toolbar;
 
 			base.OnCreate(bundle);
